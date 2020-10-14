@@ -119,9 +119,22 @@
   z-index: 1;
 }
 .message__container {
-  margin: 5%;
-  padding: 5%;
-  border: 1px solid salmon;
+  margin: 0% 5rem;
+}
+.message-card {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  border: 1px groove;
+  width: fit-content;
+  height: 10rem;
+  margin: 20% auto;
+  padding: 2rem 10%;
+  border-radius: 1rem;
+}
+.message__heading {
+  border-bottom: 1px solid whitesmoke;
 }
 @keyframes loading {
   from {

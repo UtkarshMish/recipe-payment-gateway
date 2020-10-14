@@ -23,7 +23,7 @@ function Purchase(props) {
       e.target.value += " ";
     }
     const cardDetails = cardValue.replaceAll(" ", "");
-    setCardDetails(parseInt(cardDetails));
+    setCardDetails(cardDetails);
   };
   const handleOTP = (e) => {
     const OTP = parseInt(e.target.value);
@@ -91,19 +91,21 @@ function Purchase(props) {
                 className="payment__options"
               >
                 <div className="card-details__container">
-                  <label htmlFor="credit-card">Enter Card Details: </label>
-                  <input
-                    type="text"
-                    className="credit-card__details"
-                    name="credit-card"
-                    onInput={(e) => handleInputCheck(e)}
-                    placeholder="---- ---- ---- ----"
-                    minLength={19}
-                    maxLength={19}
-                    pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}"
-                    title="Enter ONLY numbers"
-                    required
-                  />
+                  <label htmlFor="credit-card">
+                    Enter Card Details:
+                    <input
+                      type="text"
+                      className="credit-card__details"
+                      name="credit-card"
+                      onInput={(e) => handleInputCheck(e)}
+                      placeholder="---- ---- ---- ----"
+                      minLength={19}
+                      maxLength={19}
+                      pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}"
+                      title="Enter ONLY numbers"
+                      required
+                    />
+                  </label>
                 </div>
 
                 {showOTP ? (
