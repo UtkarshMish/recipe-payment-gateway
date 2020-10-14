@@ -1,0 +1,118 @@
+.payment__container {
+  display: flex;
+  position: relative;
+  margin: 10% 14%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.payment__card {
+  display: flex;
+  border: 1px solid white;
+  flex-direction: column;
+  border-radius: 1rem;
+  min-width: 65%;
+  flex-wrap: wrap;
+}
+.heading {
+  margin: 1%;
+}
+.summary.heading {
+  border-bottom: 1px solid wheat;
+}
+.purchase__heading {
+  display: flex;
+  margin: 1% 8%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+  flex-wrap: wrap;
+}
+.purchase__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.purchase__summary {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border: 1px solid wheat;
+  border-radius: 1rem;
+  position: absolute;
+  justify-content: space-between;
+  right: 0;
+}
+.payment__info {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+.payment__info > h3 {
+  text-align: left;
+  border-bottom: 1px solid wheat;
+}
+.payment__options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card-submit {
+  border-radius: 1rem;
+  background-color: aqua;
+  transition: all 0.2s;
+  font-size: medium;
+  min-width: 15%;
+  font-weight: bold;
+  outline: none;
+  color: white;
+}
+.card-details__container {
+  min-width: 85%;
+  height: 100%;
+  text-align: right;
+}
+.credit-card__details {
+  max-width: 65%;
+  min-width: 40%;
+  text-align: center;
+  margin: 3%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.card-submit:hover {
+  transform: scale(1.1);
+}
+.card-submit:active,
+a:active {
+  background-color: rgba(135, 221, 6, 0.753);
+  transform: translateY(0.25rem) scale(1);
+}
+@media only screen and (max-width: 1385px) {
+  .purchase__heading {
+    margin: 1% 13%;
+  }
+  .purchase__summary {
+    position: relative;
+    margin: 2%;
+  }
+  .purchase__body {
+    justify-content: center;
+  }
+  .payment__container {
+    justify-content: center;
+  }
+  .payment__options {
+    justify-content: flex-end;
+  }
+}

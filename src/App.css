@@ -1,34 +1,129 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading__container {
+  display: flex;
+  height: calc(100vh - 15vmin);
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loader {
+  color: #a6f0fa;
+  transition: all 5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  animation: loading 1.5s infinite;
 }
+.recipe__container {
+  display: flex;
+  color: whitesmoke;
+  flex-direction: column;
+  padding: 5% 10%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
+}
+.recipe__title {
+  display: flex;
+  border-bottom: 0.1rem solid whitesmoke;
+  margin-bottom: 1rem;
+  justify-content: space-around;
+  align-items: flex-end;
+  line-height: 0.8;
+  text-overflow: clip;
+}
+.recipe__title > h5 {
+  font-size: 1.2rem;
+}
+.recipe__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+.recipe__card {
+  margin: 1.5rem 0;
+  padding: 0.4rem 2.5rem 1rem 2.5rem;
+  background: linear-gradient(to top right, #030c8fc7, #ca064e);
+  border-radius: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-height: 50rem;
+  min-height: auto;
+  width: 18rem;
+  min-width: auto;
 }
-
-.App-link {
-  color: #61dafb;
+.recipe__image {
+  height: 8rem;
+  width: 10rem;
 }
-
-@keyframes App-logo-spin {
+.recipe__image > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.recipe__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recipe__button {
+  padding: 1.2rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: antiquewhite;
+  border-radius: 10%;
+  font-size: large;
+  background-color: #ca064e;
+}
+.recipe__button:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.recipe__price {
+  display: flex;
+  justify-content: baseline;
+  align-items: flex-end;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  margin: 0 4rem;
+  text-align: justify;
+  font-size: small;
+  font-style: italic;
+}
+.description > p {
+  margin-top: -5%;
+}
+.recipe__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: small;
+  transform: translateY(-1rem);
+  color: #e6d53d;
+}
+.label__icon {
+  font-size: 3.5rem;
+  transform: rotate(-235deg);
+}
+.recipe__label > p {
+  margin-left: -2.8rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #ca064e;
+  z-index: 1;
+}
+.message__container {
+  margin: 5%;
+  padding: 5%;
+  border: 1px solid salmon;
+}
+@keyframes loading {
   from {
     transform: rotate(0deg);
   }

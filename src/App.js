@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom';
+import Browse from './components/Browse';
+import Home from './components/Home';
 import './App.css';
-
-function App() {
+import Purchase from './components/Purchase';
+import Message from './components/common/Message';
+function App()
+{
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path={"/transaction-details"} component={Message} exact />
+        <Route path={"/buyItem"} component={Purchase} />
+        <Route path={"/browse"} component={Browse} exact />
+        <Route path={"/"} component={Home} />
+      </Switch>
     </div>
   );
 }
